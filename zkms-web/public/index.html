@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>zkms</title>
+</head>
+<body>
+<div id= "s1"></div>
+<script src ="jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$.ajax({
+			method : 'GET',
+			url : '/hello',
+			headers :{
+				'Service-Name' : 'HelloService'
+			},
+			success : function(data){
+				$('#s1').text(data);
+			}
+		});
+	});
+</script>
+</body>
+</html>
